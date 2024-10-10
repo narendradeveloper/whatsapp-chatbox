@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #e7dada;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chatbox {
+    width: 400px;
+    background-color: #d18f8f;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(226, 219, 219, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    border-bottom: 1px solid #161414;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sent {
+    background-color: #bacaae;
+    align-self: flex-end;
+}
+
+.received {
+    background-color: #f1f0f0;
+    align-self: flex-start;
+}
+
+.message-form {
+    display: flex;
+    padding: 10px;
+}
+
+.message-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #1d1717;
+    border-radius: 5px;
+}
+
+.message-form button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.message-form input[type="text"]:focus {
+    border-color: #4CAF50;
+}
+
+.message-form input[type="text"][required]:invalid {
+    border-color: red;
+}
+
+.message-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+    </style>
+    <title>Chatbox UI</title>
+</head>
+<body>
+    <div class="chatbox">
+        <div class="messages">
+            <div class="message sent">Hello! How are you?</div>
+            <div class="message received">I'm good, thanks! How about you?</div>
+        </div>
+        <form class="message-form">
+            <input type="text" placeholder="Type your message..." required />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
